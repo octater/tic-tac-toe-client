@@ -70,19 +70,19 @@
 
     <!-- Try making an evenly spaced 3x3 grid. -->
     <div class="row">
-      <div class="col-xs-4 box1">.col-xs-4</div>
-      <div class="col-xs-4 box2">.col-xs-4</div>
-      <div class="col-xs-4 box3">.col-xs-4</div>
+      <div id=box1 class="col-xs-4 box">.col-xs-4</div>
+      <div id=box2 class="col-xs-4 box">.col-xs-4</div>
+      <div id=box3 class="col-xs-4 box">.col-xs-4</div>
+    </div>
+    <div class="row row2">
+      <div id=box4 class="col-xs-4 box">.col-xs-4</div>
+      <div id=box5 class="col-xs-4 box">.col-xs-4</div>
+      <div id=box6 class="col-xs-4 box">.col-xs-4</div>
     </div>
     <div class="row">
-      <div class="col-xs-4 box4">.col-xs-4</div>
-      <div class="col-xs-4 box5">.col-xs-4</div>
-      <div class="col-xs-4 box6">.col-xs-4</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-4 box7">.col-xs-4</div>
-      <div class="col-xs-4 box8">.col-xs-4</div>
-      <div class="col-xs-4 box9">.col-xs-4</div>
+      <div id=box7 class="col-xs-4 box">.col-xs-4</div>
+      <div id=box8 class="col-xs-4 box">.col-xs-4</div>
+      <div id=box9 class="col-xs-4 box">.col-xs-4</div>
     </div>
 
     <!-- Modal -->
@@ -96,21 +96,18 @@
           <div class="modal-body">
             <form id="sign-up">
               <div class="signUp-group">
-                <!-- <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="name"> -->
                 <fieldset>
-                  <!-- <legend>Sign-up</legend> -->
                   <input name="credentials[email]" type="text" value="an@example.email">
                   <input name="credentials[password]" type="password" value="an example password">
                   <input name="credentials[password_confirmation]" type="password" value="an example password">
                 </fieldset>
               </div>
-              <!-- <button type="submit" class="btn btn-default">Save Changes</button> -->
+              <button type="submit" class="btn btn-default">Save Changes</button>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Save changes</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
           </div>
         </div>
       </div>
@@ -126,7 +123,7 @@
           <h4 class="modal-title" id="mySignIn">Sign-in</h4>
         </div>
         <div class="modal-body">
-          <form id="sing-in">
+          <form id="sign-in">
             <div class="signIn-group">
               <!-- <label for="name">Name</label>
               <input type="text" class="form-control" id="name" placeholder="name"> -->

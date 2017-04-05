@@ -5,10 +5,10 @@ $font-color: #dfdfdf;
 $white: #fff;
 $black: #000;
 
-body {
-  background-color: $background-color;
-  color: $font-color;
-}
+// body {
+//   background-color: $background-color;
+//   color: $font-color;
+// }
 
 h1 {
   padding-bottom: 30px;
@@ -16,36 +16,8 @@ h1 {
 
 }
 
-.box2 {
-  border-left: 2px solid $black;
-  border-right: 2px solid $black;
-  box-sizing: border-box;
-  height: 130px;
-}
-
-.box4 {
-  border-bottom: 2px solid $black;
-  border-top: 2px solid $black;
-  box-sizing: border-box;
-  height: 130px;
-}
-
-.box5 {
-  border: 2px solid $black;
-  box-sizing: border-box;
-  height: 130px;
-}
-
-.box6 {
-  border-bottom: 2px solid $black;
-  border-top: 2px solid $black;
-  box-sizing: border-box;
-  height: 130px;
-}
-
-.box8 {
-  border-left: 2px solid $black;
-  border-right: 2px solid $black;
+.box {
+  border: 1px solid $black;
   box-sizing: border-box;
   height: 130px;
 }
