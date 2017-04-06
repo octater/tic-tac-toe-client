@@ -1,7 +1,7 @@
 'use strict'
 
 const app = require('../app')
-const store = require('../store')
+const player = require('../player')
 
 // const getFormFields = require('../../../lib/get-form-fields.js');
 
@@ -28,9 +28,9 @@ const signIn = function (data) {
 const signOut = function () {
   return $.ajax({
     method: 'DELETE',
-    url: app.host + '/sign-out/' + store.user.id,
+    url: app.host + '/sign-out/' + player.user.id,
     headers: {
-      Authorization: 'Token token=' + store.user.token
+      Authorization: 'Token token=' + player.user.token
     }
   })
 }
@@ -38,9 +38,9 @@ const signOut = function () {
 const changePassword = function (data) {
   return $.ajax({
     method: 'PATCH',
-    url: app.host + '/change-password/' + store.user.id,
+    url: app.host + '/change-password/' + player.user.id,
     headers: {
-      Authorization: 'Token token=' + store.user.token
+      Authorization: 'Token token=' + player.user.token
     },
     data
   })

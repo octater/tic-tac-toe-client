@@ -3,7 +3,7 @@
 const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('../../../lib/get-form-fields.js')
-const store = require('../store.js')
+const player = require('../player.js')
 
 // const setAPIOrigin = require('../../lib/set-api-origin')
 
@@ -36,9 +36,9 @@ const onSignOut = function (event) {
   const data = getFormFields(event.target)
 
   console.log('made it to onSignOut, data is: ', data)
-  console.log('made it to onSignOut, store is: ', store)
+  console.log('made it to onSignOut, player is: ', player)
 
-  if (Object.keys(store).length === 0) {
+  if (Object.keys(player).length === 0) {
     const title = 'Danger Will Robinson'
     const body = 'Error with sign-out'
     $('#alert-modal-title').html(title)
@@ -60,22 +60,11 @@ const onChangePassword = function (event) {
   .fail(ui.changePasswordFailure)
 }
 
-const onBox1 = function (event) {
-  event.preventDefault()
-  console.log('box1 has been clicked')
-}
-
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example');
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
-  $('#box1').on('click', onBox1)
-// $('#sign-in').on('submit', onSignIn);
-  // $('#sign-out').on('submit', onSignOut);
-  // $('#change-password').on('submit', onChangePassword);
 }
 
 module.exports = {

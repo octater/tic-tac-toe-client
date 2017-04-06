@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('../store.js')
+const player = require('../player.js')
 
 const signUpSuccess = (data) => {
   console.log('ui success: ', data)
@@ -18,8 +18,8 @@ const signUpFailure = (error) => {
 
 const signInSuccess = (data) => {
   console.log('signInSuccess data is: ', data)
-  store.user = data.user
-  console.log('success log, store user is ', store.user)
+  player.user = data.user
+  console.log('success log, store user is ', player.user)
   $('#signIn').modal('hide')
 }
 
@@ -33,8 +33,8 @@ const signInFailure = (error) => {
 }
 
 const signOutSuccess = () => {
-  store.user = null
-  console.log('here is the store after signing out', store)
+  player.user = null
+  console.log('here is the store after signing out', player)
   $('#signOut').modal('hide')
 }
 
