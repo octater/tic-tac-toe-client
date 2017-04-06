@@ -1,6 +1,7 @@
 'use strict'
 
-const player = require('../player.js')
+const player1 = require('../player1.js')
+const player2 = require('../player2.js')
 
 const signUpSuccess = (data) => {
   console.log('ui success: ', data)
@@ -18,8 +19,16 @@ const signUpFailure = (error) => {
 
 const signInSuccess = (data) => {
   console.log('signInSuccess data is: ', data)
-  player.user = data.user
-  console.log('success log, store user is ', player.user)
+  // if (Object.keys(player1).length === 0) {
+  if (player1.user.id === 0) {
+    player1.user = data.user
+    console.log('success log, signin player1 is ', player1)
+    console.log('success log, signin player2 is ', player2)
+  } else {
+    player2.user = data.user
+    console.log('success log, signin player2 is ', player2)
+  }
+
   $('#signIn').modal('hide')
 }
 
@@ -33,8 +42,15 @@ const signInFailure = (error) => {
 }
 
 const signOutSuccess = () => {
-  player.user = null
-  console.log('here is the store after signing out', player)
+  // if (Object.keys(player2).length !== 0) {
+  if (player2.user.id !== 0) {
+    player2.user.id = 0
+    console.log('success log, signout player2 is ', player2)
+  } else {
+    player1.user.id = 0
+    console.log('success log, signout player1 is ', player1)
+  }
+
   $('#signOut').modal('hide')
 }
 

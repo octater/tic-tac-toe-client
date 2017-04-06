@@ -1,7 +1,8 @@
 'use strict'
 
 const app = require('../app')
-const player = require('../player')
+const player1 = require('../player1.js')
+const player2 = require('../player2.js')
 
 // const getFormFields = require('../../../lib/get-form-fields.js');
 
@@ -26,21 +27,51 @@ const signIn = function (data) {
 }
 
 const signOut = function () {
+  let playerId = 0
+  let playerToken = 0
+
+  console.log('here is player2 in signout ', player2)
+
+  // if (Object.keys(player2).length !== 0) {
+  if (player2.user.id !== 0) {
+    playerId = player2.user.id
+    playerToken = player2.user.token
+    console.log('user player2 for signout ', player2)
+  } else {
+    playerId = player1.user.id
+    playerToken = player1.user.token
+    console.log('user player1 for signout ', player1)
+  }
+
   return $.ajax({
     method: 'DELETE',
-    url: app.host + '/sign-out/' + player.user.id,
+    url: app.host + '/sign-out/' + playerId,
     headers: {
-      Authorization: 'Token token=' + player.user.token
+      Authorization: 'Token token=' + playerToken
     }
   })
 }
 
 const changePassword = function (data) {
+  let playerId = 0
+  let playerToken = 0
+
+  // if (Object.keys(player2).length !== 0) {
+  if (player2.user.id !== 0) {
+    playerId = player2.user.id
+    playerToken = player2.user.token
+    console.log('user player2 for signout ', player2)
+  } else {
+    playerId = player1.user.id
+    playerToken = player1.user.token
+    console.log('user player1 for signout ', player1)
+  }
+
   return $.ajax({
     method: 'PATCH',
-    url: app.host + '/change-password/' + player.user.id,
+    url: app.host + '/change-password/' + playerId,
     headers: {
-      Authorization: 'Token token=' + player.user.token
+      Authorization: 'Token token=' + playerToken
     },
     data
   })
