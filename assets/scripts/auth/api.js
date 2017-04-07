@@ -1,8 +1,9 @@
 'use strict'
 
-const app = require('../app')
+// const app = require('../app')
 const player1 = require('../player1.js')
 const player2 = require('../player2.js')
+const config = require('../config')
 
 // const getFormFields = require('../../../lib/get-form-fields.js');
 
@@ -11,7 +12,7 @@ const player2 = require('../player2.js')
 const signUp = function (data) {
   console.log('here is my data: ', data)
   return $.ajax({
-    url: app.host + '/sign-up/',
+    url: config.apiOrigin + '/sign-up/',
     method: 'POST',
     data
   })
@@ -20,7 +21,7 @@ const signUp = function (data) {
 const signIn = function (data) {
   console.log('here is my signIn data', data)
   return $.ajax({
-    url: app.host + '/sign-in/',
+    url: config.apiOrigin + '/sign-in/',
     method: 'POST',
     data
   })
@@ -45,7 +46,7 @@ const signOut = function () {
 
   return $.ajax({
     method: 'DELETE',
-    url: app.host + '/sign-out/' + playerId,
+    url: config.apiOrigin + '/sign-out/' + playerId,
     headers: {
       Authorization: 'Token token=' + playerToken
     }
@@ -69,7 +70,7 @@ const changePassword = function (data) {
 
   return $.ajax({
     method: 'PATCH',
-    url: app.host + '/change-password/' + playerId,
+    url: config.apiOrigin + '/change-password/' + playerId,
     headers: {
       Authorization: 'Token token=' + playerToken
     },
