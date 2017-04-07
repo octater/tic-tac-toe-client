@@ -3,6 +3,8 @@
 const api = require('./api')
 const ui = require('./ui')
 const player1 = require('../player1.js')
+// const game = require('../game.js')
+const currentMove = require('../current-move.js')
 
 // const getFormFields = require('../../../lib/get-form-fields.js')
 // const player = require('../player.js')
@@ -35,18 +37,18 @@ const onCreateGame = function (event) {
   .fail(ui.CreateGameFailure)
 }
 
-// const onSignIn = function (event) {
-//   event.preventDefault()
-//
-//   const data = getFormFields(event.target)
-//
-//   console.log('made it to onSignIn, data is: ', data)
-//
-//   api.signIn(data)
-//   .done(ui.signInSuccess)
-//   .fail(ui.signInFailure)
-// }
-//
+const onUpdateGame = function () {
+  // event.preventDefault()
+
+  // const data = getFormFields(event.target)
+
+  console.log('made it to update game, data is: ', currentMove)
+
+  api.updateMove(currentMove)
+  .done(ui.updateMoveSuccess)
+  .fail(ui.updateMoveFailure)
+}
+
 // const onSignOut = function (event) {
 //   event.preventDefault()
 //   const data = getFormFields(event.target)
@@ -84,5 +86,6 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  onUpdateGame
 }
