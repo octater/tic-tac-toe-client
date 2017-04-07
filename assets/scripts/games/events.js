@@ -10,7 +10,7 @@ const currentMove = require('../current-move.js')
 // const player = require('../player.js')
 // const game = require('../game.js')
 
-// const setAPIOrigin = require('../../lib/set-api-origin')
+const setAPIOrigin = require('../../../lib/set-api-origin')
 
 const onCreateGame = function (event) {
   event.preventDefault()
@@ -87,5 +87,6 @@ const addHandlers = () => {
 
 module.exports = {
   addHandlers,
-  onUpdateGame
+  onUpdateGame,
+  setAPIOrigin
 }

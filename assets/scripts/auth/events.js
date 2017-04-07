@@ -6,7 +6,7 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 const player1 = require('../player1.js')
 const player2 = require('../player2.js')
 
-// const setAPIOrigin = require('../../lib/set-api-origin')
+const setAPIOrigin = require('../../../lib/set-api-origin')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -70,5 +70,6 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  setAPIOrigin
 }
