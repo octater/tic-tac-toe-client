@@ -33,9 +33,12 @@ const game = require('../game.js')
 // }
 
 const createGameSuccess = (data) => {
+  game.clicks = 0
+  game.playerup = 1
   game.game = data.game
   console.log('here is the game after a create game was issued', game)
   $('#signOut').modal('hide')
+  $('#player-now-up').text('Player 1 is now on the clock')
 }
 
 const createGameFailure = (error) => {

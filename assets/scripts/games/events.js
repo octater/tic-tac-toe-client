@@ -17,10 +17,11 @@ const onCreateGame = function (event) {
 
   console.log('made it to onCreateGame')
 
-  if (Object.keys(player1).length === 0) {
+  // if (Object.keys(player1).length === 0) {
+  if (player1.user.id === 0) {
     console.log('user player1 requested new game ', player1)
     const title = 'Danger Will Robinson'
-    const body = 'A player must be signed in before creating a new game'
+    const body = 'A player 1 must be signed in before creating a new game'
     $('#alert-modal-title').html(title)
     $('#alert-modal-body').html(body)
     $('#alert-modal').modal('show')
