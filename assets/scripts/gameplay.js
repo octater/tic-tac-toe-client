@@ -3,9 +3,11 @@
 // const config = require('./config')
 
 // const authEvents = require('./auth/events.js')
-const gameEvents = require('./games/events.js')
+// const gameEvents = require('./games/events.js')
 const game = require('./game.js')
 const currentMove = require('./current-move.js')
+const api = require('./games/api')
+const ui = require('./games/ui')
 
 const onBox1 = function (event) {
   if (game.isReady === 'N') {
@@ -800,8 +802,21 @@ const buildCurrentMove = function (boxNumber, player, gameStatus) {
     currentMove.game.over = false
   }
   console.log('here is the currentMove object: ', currentMove)
-  gameEvents.updateGameMoves()
+  // gameEvents.updateGameMoves()
+  updtGame()
   return
+}
+
+const updtGame = function () {
+  // event.preventDefault()
+
+  // const data = getFormFields(event.target)
+
+  console.log('made it to update game, data is: ', currentMove)
+
+  api.updateMove(currentMove)
+  .done(ui.updateMoveSuccess)
+  .fail(ui.updateMoveFailure)
 }
 
 const addHandlers = () => {
