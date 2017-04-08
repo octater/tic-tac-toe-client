@@ -6,5 +6,4 @@ const player1 = {
   }
 
 }
-
 module.exports = player1

@@ -64,9 +64,20 @@ const createGame = function () {
   })
 }
 
+const myStats = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiOrigin + '/games?over=true',
+    headers: {
+      Authorization: 'Token token=' + player1.user.token
+    }
+  })
+}
+
 module.exports = {
   createGame,
-  updateMove
+  updateMove,
+  myStats
   // signIn,
   // signOut,
   // changePassword

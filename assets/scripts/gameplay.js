@@ -661,6 +661,126 @@ const gameStatus = function () {
   return winner
 }
 
+const winnerWinner = function (data) {
+  console.log('made it to winnerWinner with this data: ', data)
+  let winner = ' '
+
+  const xPos = []
+  const oPos = []
+  for (let i = 0; i < data.length; i++) {
+    if (data[i] === 'X') {
+      xPos.push(i + 1)
+    } else {
+      if (data[i] === 'O') {
+        oPos.push(i + 1)
+      }
+    }
+  }
+  console.log('here is the xPos[]: ', xPos)
+  console.log('here is the oPos[]: ', oPos)
+
+  if (xPos.indexOf(1) > -1 && xPos.indexOf(2) > -1 && xPos.indexOf(3) > -1) {
+    winner = 'X'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (xPos.indexOf(1) > -1 && xPos.indexOf(4) > -1 && xPos.indexOf(7) > -1) {
+    winner = 'X'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (xPos.indexOf(1) > -1 && xPos.indexOf(5) > -1 && xPos.indexOf(9) > -1) {
+    winner = 'X'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (xPos.indexOf(2) > -1 && xPos.indexOf(5) > -1 && xPos.indexOf(8) > -1) {
+    winner = 'X'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (xPos.indexOf(3) > -1 && xPos.indexOf(5) > -1 && xPos.indexOf(7) > -1) {
+    winner = 'X'
+
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (xPos.indexOf(3) > -1 && xPos.indexOf(6) > -1 && xPos.indexOf(9) > -1) {
+    winner = 'X'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (xPos.indexOf(4) > -1 && xPos.indexOf(5) > -1 && xPos.indexOf(6) > -1) {
+    winner = 'X'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (xPos.indexOf(7) > -1 && xPos.indexOf(8) > -1 && xPos.indexOf(9) > -1) {
+    winner = 'X'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (oPos.indexOf(1) > -1 && oPos.indexOf(2) > -1 && oPos.indexOf(3) > -1) {
+    winner = 'O'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (oPos.indexOf(1) > -1 && oPos.indexOf(4) > -1 && oPos.indexOf(7) > -1) {
+    winner = 'O'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (oPos.indexOf(1) > -1 && oPos.indexOf(5) > -1 && oPos.indexOf(9) > -1) {
+    winner = 'O'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (oPos.indexOf(2) > -1 && oPos.indexOf(5) > -1 && oPos.indexOf(8) > -1) {
+    winner = 'O'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (oPos.indexOf(3) > -1 && oPos.indexOf(5) > -1 && oPos.indexOf(7) > -1) {
+    winner = 'O'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (oPos.indexOf(3) > -1 && oPos.indexOf(6) > -1 && oPos.indexOf(9) > -1) {
+    winner = 'O'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (oPos.indexOf(4) > -1 && oPos.indexOf(5) > -1 && oPos.indexOf(6) > -1) {
+    winner = 'O'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  if (oPos.indexOf(7) > -1 && oPos.indexOf(8) > -1 && oPos.indexOf(9) > -1) {
+    winner = 'O'
+    console.log('we have a winner: ', winner)
+    return winner
+  }
+
+  winner = 'C'
+  console.log('we have a winner: ', winner)
+  return winner
+}
+
 const buildCurrentMove = function (boxNumber, player, gameStatus) {
   console.log('boxNumber is: ', boxNumber)
   console.log('player is: ', player)
@@ -680,8 +800,7 @@ const buildCurrentMove = function (boxNumber, player, gameStatus) {
     currentMove.game.over = false
   }
   console.log('here is the currentMove object: ', currentMove)
-  gameEvents.onUpdateGame()
-
+  gameEvents.updateGameMoves()
   return
 }
 
@@ -698,5 +817,6 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  winnerWinner
 }

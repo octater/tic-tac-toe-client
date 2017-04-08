@@ -1,36 +1,7 @@
 'use strict'
 
 const game = require('../game.js')
-
-// const signUpSuccess = (data) => {
-//   console.log('ui success: ', data)
-//   $('#signUp').modal('hide')
-// }
-//
-// const signUpFailure = (error) => {
-//   console.error('failiure log', error)
-//   const title = 'Danger Will Robinson'
-//   const body = 'Error with sign-up'
-//   $('#alert-modal-title').html(title)
-//   $('#alert-modal-body').html(body)
-//   $('#alert-modal').modal('show')
-// }
-//
-// const signInSuccess = (data) => {
-//   console.log('signInSuccess data is: ', data)
-//   player.user = data.user
-//   console.log('success log, store user is ', player.user)
-//   $('#signIn').modal('hide')
-// }
-//
-// const signInFailure = (error) => {
-//   console.error('signInFailiure log', error)
-//   const title = 'Danger Will Robinson'
-//   const body = 'Error with sign-in'
-//   $('#alert-modal-title').html(title)
-//   $('#alert-modal-body').html(body)
-//   $('#alert-modal').modal('show')
-// }
+const gamePlay = require('../gameplay.js')
 
 const createGameSuccess = (data) => {
   game.clicks = 0
@@ -38,7 +9,7 @@ const createGameSuccess = (data) => {
   game.game = data.game
   game.gameOver = 0
   game.isReady = 'Y'
-  console.log('here is the game after a create game was issued', game)
+  // console.log('here is the game after a create game was issued', game)
   $('#signOut').modal('hide')
   $('#box1').css('background-color', '#fff')
   $('#box2').css('background-color', '#fff')
@@ -53,47 +24,83 @@ const createGameSuccess = (data) => {
 }
 
 const createGameFailure = (error) => {
-  console.error('createGameFailiure log', error)
+  // console.error('createGameFailiure log', error)
   const title = 'Danger Will Robinson'
-  const body = 'Error with creating a new game'
+  const body = 'Error with creating a new game ' + error
   $('#alert-modal-title').html(title)
   $('#alert-modal-body').html(body)
   $('#alert-modal').modal('show')
 }
 
 const updateMoveSuccess = (data) => {
-  console.log('here is the game after an update move was issued', game)
+  // console.log('here is the game after an update move was issued', game)
 }
 
 const updateMoveFailure = (error) => {
-  console.error('createGameFailiure log', error)
+  // console.error('createGameFailiure log', error)
   const title = 'Danger Will Robinson'
-  const body = 'Error with move update for the game'
+  const body = 'Error with move update for the game' + error
   $('#alert-modal-title').html(title)
   $('#alert-modal-body').html(body)
   $('#alert-modal').modal('show')
 }
-// const changePasswordSuccess = () => {
-//   console.log('change password success')
-//   $('#changePassword').modal('hide')
-// }
-//
-// const changePasswordFailure = (error) => {
-//   console.error('change password Failiure log', error)
-//   const title = 'Danger Will Robinson'
-//   const body = 'Error with changing password'
-//   $('#alert-modal-title').html(title)
-//   $('#alert-modal-body').html(body)
-//   $('#alert-modal').modal('show')
-// }
+
+const myStatsSuccess = (data) => {
+  // console.log('here is the result of myStatsSuccess ', data)
+
+  const gameRecord = getWins(data)
+  console.log('here is the game record: ', gameRecord)
+  const title = 'Here are your game stats'
+  const body = gameRecord
+  $('#alert-modal-title').html(title)
+  $('#alert-modal-body').html(body)
+  $('#alert-modal').modal('show')
+}
+
+const myStatsFailure = (error) => {
+  // console.error('myStatsFailiure log', error)
+  const title = 'Danger Will Robinson'
+  const body = 'Error with my Stats.  Sorry bud. ' + error
+  $('#alert-modal-title').html(title)
+  $('#alert-modal-body').html(body)
+  $('#alert-modal').modal('show')
+}
+
+const getWins = function (data) {
+  const games = data.games
+  const obj = {}
+  let winnerX = 0
+  let winnerO = 0
+  let winnerC = 0
+  let finalRecord = ' '
+
+  games.forEach(function (item) {
+    obj.game = item.id
+    obj.cells = item.cells
+    // console.log('obj.game is: ', obj.game)
+    // console.log('obj.cells is: ', obj.cells)
+
+    if (gamePlay.winnerWinner(obj.cells) === 'X') {
+      winnerX += 1
+    } else {
+      if (gamePlay.winnerWinner(obj.cells) === 'O') {
+        winnerO += 1
+      } else {
+        winnerC += 1
+      }
+    }
+  })
+
+  finalRecord = winnerX + '-' + winnerO + '-' + winnerC
+  return finalRecord
+}
 
 module.exports = {
   createGameSuccess,
   createGameFailure,
   updateMoveSuccess,
-  updateMoveFailure
-  // signOutSuccess,
-  // signOutFailure,
-  // changePasswordSuccess,
-  // changePasswordFailure
+  updateMoveFailure,
+  myStatsSuccess,
+  myStatsFailure,
+  getWins
 }
