@@ -9,17 +9,8 @@ const config = require('../config')
 
  // authApi.signUp(authUi.success, authUi.failure, data);
 
-// const signUp = function (data) {
-//   console.log('here is my data: ', data)
-//   return $.ajax({
-//     url: config.apiOrigin + '/sign-up/',
-//     method: 'POST',
-//     data
-//   })
-// }
-
 const updateMove = function (inData) {
-  console.log('here is my current move inData from within updateMove: ', inData)
+  // console.log('here is my current move inData from within updateMove: ', inData)
 
   const data = {
     'game': {
@@ -30,9 +21,9 @@ const updateMove = function (inData) {
       'over': inData.game.over
     }
   }
-  console.log('here is my current move data from within updateMove: ', data)
-  console.log('here is game object in updateMove: ', game)
-  console.log('here is player1 object in updateMove: ', player1)
+  // console.log('here is my current move data from within updateMove: ', data)
+  // console.log('here is game object in updateMove: ', game)
+  // console.log('here is player1 object in updateMove: ', player1)
 
   return $.ajax({
     url: config.apiOrigin + '/games/' + game.game.id,
@@ -43,16 +34,6 @@ const updateMove = function (inData) {
     data
   })
 }
-
-// const signOut = function () {
-//   return $.ajax({
-//     method: 'DELETE',
-//     url: config.apiOrigin + '/sign-out/' + player.user.id,
-//     headers: {
-//       Authorization: 'Token token=' + player.user.token
-//     }
-//   })
-// }
 
 const createGame = function () {
   return $.ajax({
@@ -78,7 +59,4 @@ module.exports = {
   createGame,
   updateMove,
   myStats
-  // signIn,
-  // signOut,
-  // changePassword
 }

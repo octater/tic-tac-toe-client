@@ -49,7 +49,7 @@ const myStatsSuccess = (data) => {
   // console.log('here is the result of myStatsSuccess ', data)
 
   const gameRecord = getWins(data)
-  console.log('here is the game record: ', gameRecord)
+  // console.log('here is the game record: ', gameRecord)
   const title = 'Here are your game stats'
   const body = gameRecord
   $('#alert-modal-title').html(title)

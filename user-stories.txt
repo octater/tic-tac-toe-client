@@ -1,0 +1,6 @@
+1. as a future player I would like to signup so I could play TTT at a later time.
+2. as a signed up player I would like to sign in to play TTT game now.
+3. as a signed in player, I would like to change my password so I don't get hacked.
+4. as a signed in player, I would like to play the game so I am selecting play.
+5. as a great TTT player, I would like to see my playing record so I will select show stats.
+6. as a tired TTT player, I would like to have a drink with friends so I am selecting the log out

@@ -19,7 +19,6 @@ const onBox1 = function (event) {
 
   event.preventDefault()
 
-  console.log('box1 has been clicked')
   game.clicks += 1
 
   let holdPlayerUp = 0
@@ -37,19 +36,19 @@ const onBox1 = function (event) {
   }
   $('#player-now-up').text('Player ' + game.playerup + ' is now on the clock')
 
-  console.log('here is the game object: ', game)
+  // console.log('here is the game object: ', game)
 
   let currentGameStatus = ' '
   let finalGameStatus = ' '
 
   if (game.clicks > 4) {
     currentGameStatus = gameStatus()
-    console.log('game status is: ', currentGameStatus)
+    // console.log('game status is: ', currentGameStatus)
   }
 
   if (game.clicks > 8) {
     finalGameStatus = gameStatus()
-    console.log('game final status is: ', finalGameStatus)
+    // console.log('game final status is: ', finalGameStatus)
   }
   if (currentGameStatus === 'X' || finalGameStatus === 'X') {
     game.gameOver = 1
@@ -82,7 +81,6 @@ const onBox2 = function (event) {
 
   event.preventDefault()
 
-  console.log('box1 has been clicked')
   game.clicks += 1
 
   let holdPlayerUp = 0
@@ -100,19 +98,19 @@ const onBox2 = function (event) {
   }
   $('#player-now-up').text('Player ' + game.playerup + ' is now on the clock')
 
-  console.log('here is the game object: ', game)
+  // console.log('here is the game object: ', game)
 
   let currentGameStatus = ' '
   let finalGameStatus = ' '
 
   if (game.clicks > 4) {
     currentGameStatus = gameStatus()
-    console.log('game status is: ', currentGameStatus)
+    // console.log('game status is: ', currentGameStatus)
   }
 
   if (game.clicks > 8) {
     finalGameStatus = gameStatus()
-    console.log('game final status is: ', finalGameStatus)
+    // console.log('game final status is: ', finalGameStatus)
   }
   if (currentGameStatus === 'X' || finalGameStatus === 'X') {
     game.gameOver = 1
@@ -145,7 +143,6 @@ const onBox3 = function (event) {
 
   event.preventDefault()
 
-  console.log('box1 has been clicked')
   game.clicks += 1
 
   let holdPlayerUp = 0
@@ -163,19 +160,19 @@ const onBox3 = function (event) {
   }
   $('#player-now-up').text('Player ' + game.playerup + ' is now on the clock')
 
-  console.log('here is the game object: ', game)
+  // console.log('here is the game object: ', game)
 
   let currentGameStatus = ' '
   let finalGameStatus = ' '
 
   if (game.clicks > 4) {
     currentGameStatus = gameStatus()
-    console.log('game status is: ', currentGameStatus)
+    // console.log('game status is: ', currentGameStatus)
   }
 
   if (game.clicks > 8) {
     finalGameStatus = gameStatus()
-    console.log('game final status is: ', finalGameStatus)
+    // console.log('game final status is: ', finalGameStatus)
   }
   if (currentGameStatus === 'X' || finalGameStatus === 'X') {
     game.gameOver = 1
@@ -207,7 +204,6 @@ const onBox4 = function (event) {
 
   event.preventDefault()
 
-  console.log('box1 has been clicked')
   game.clicks += 1
   let holdPlayerUp = 0
 
@@ -224,19 +220,19 @@ const onBox4 = function (event) {
   }
   $('#player-now-up').text('Player ' + game.playerup + ' is now on the clock')
 
-  console.log('here is the game object: ', game)
+  // console.log('here is the game object: ', game)
 
   let currentGameStatus = ' '
   let finalGameStatus = ' '
 
   if (game.clicks > 4) {
     currentGameStatus = gameStatus()
-    console.log('game status is: ', currentGameStatus)
+    // console.log('game status is: ', currentGameStatus)
   }
 
   if (game.clicks > 8) {
     finalGameStatus = gameStatus()
-    console.log('game final status is: ', finalGameStatus)
+    // console.log('game final status is: ', finalGameStatus)
   }
   if (currentGameStatus === 'X' || finalGameStatus === 'X') {
     game.gameOver = 1
@@ -269,7 +265,6 @@ const onBox5 = function (event) {
 
   event.preventDefault()
 
-  console.log('box1 has been clicked')
   game.clicks += 1
   let holdPlayerUp = 0
 
@@ -286,19 +281,19 @@ const onBox5 = function (event) {
   }
   $('#player-now-up').text('Player ' + game.playerup + ' is now on the clock')
 
-  console.log('here is the game object: ', game)
+  // console.log('here is the game object: ', game)
 
   let currentGameStatus = ' '
   let finalGameStatus = ' '
 
   if (game.clicks > 4) {
     currentGameStatus = gameStatus()
-    console.log('game status is: ', currentGameStatus)
+    // console.log('game status is: ', currentGameStatus)
   }
 
   if (game.clicks > 8) {
     finalGameStatus = gameStatus()
-    console.log('game final status is: ', finalGameStatus)
+    // console.log('game final status is: ', finalGameStatus)
   }
   if (currentGameStatus === 'X' || finalGameStatus === 'X') {
     game.gameOver = 1
@@ -330,7 +325,6 @@ const onBox6 = function (event) {
 
   event.preventDefault()
 
-  console.log('box1 has been clicked')
   game.clicks += 1
   let holdPlayerUp = 0
 
@@ -347,19 +341,19 @@ const onBox6 = function (event) {
   }
   $('#player-now-up').text('Player ' + game.playerup + ' is now on the clock')
 
-  console.log('here is the game object: ', game)
+  // console.log('here is the game object: ', game)
 
   let currentGameStatus = ' '
   let finalGameStatus = ' '
 
   if (game.clicks > 4) {
     currentGameStatus = gameStatus()
-    console.log('game status is: ', currentGameStatus)
+    // console.log('game status is: ', currentGameStatus)
   }
 
   if (game.clicks > 8) {
     finalGameStatus = gameStatus()
-    console.log('game final status is: ', finalGameStatus)
+    // console.log('game final status is: ', finalGameStatus)
   }
   if (currentGameStatus === 'X' || finalGameStatus === 'X') {
     game.gameOver = 1
@@ -391,7 +385,6 @@ const onBox7 = function (event) {
 
   event.preventDefault()
 
-  console.log('box1 has been clicked')
   game.clicks += 1
   let holdPlayerUp = 0
 
@@ -408,19 +401,19 @@ const onBox7 = function (event) {
   }
   $('#player-now-up').text('Player ' + game.playerup + ' is now on the clock')
 
-  console.log('here is the game object: ', game)
+  // console.log('here is the game object: ', game)
 
   let currentGameStatus = ' '
   let finalGameStatus = ' '
 
   if (game.clicks > 4) {
     currentGameStatus = gameStatus()
-    console.log('game status is: ', currentGameStatus)
+    // console.log('game status is: ', currentGameStatus)
   }
 
   if (game.clicks > 8) {
     finalGameStatus = gameStatus()
-    console.log('game final status is: ', finalGameStatus)
+    // console.log('game final status is: ', finalGameStatus)
   }
   if (currentGameStatus === 'X' || finalGameStatus === 'X') {
     game.gameOver = 1
@@ -453,7 +446,6 @@ const onBox8 = function (event) {
 
   event.preventDefault()
 
-  console.log('box1 has been clicked')
   game.clicks += 1
   let holdPlayerUp = 0
 
@@ -470,19 +462,19 @@ const onBox8 = function (event) {
   }
   $('#player-now-up').text('Player ' + game.playerup + ' is now on the clock')
 
-  console.log('here is the game object: ', game)
+  // console.log('here is the game object: ', game)
 
   let currentGameStatus = ' '
   let finalGameStatus = ' '
 
   if (game.clicks > 4) {
     currentGameStatus = gameStatus()
-    console.log('game status is: ', currentGameStatus)
+    // console.log('game status is: ', currentGameStatus)
   }
 
   if (game.clicks > 8) {
     finalGameStatus = gameStatus()
-    console.log('game final status is: ', finalGameStatus)
+    // console.log('game final status is: ', finalGameStatus)
   }
   if (currentGameStatus === 'X' || finalGameStatus === 'X') {
     game.gameOver = 1
@@ -515,7 +507,6 @@ const onBox9 = function (event) {
 
   event.preventDefault()
 
-  console.log('box1 has been clicked')
   game.clicks += 1
   let holdPlayerUp = 0
 
@@ -537,12 +528,12 @@ const onBox9 = function (event) {
 
   if (game.clicks > 4) {
     currentGameStatus = gameStatus()
-    console.log('game status is: ', currentGameStatus)
+    // console.log('game status is: ', currentGameStatus)
   }
 
   if (game.clicks > 8) {
     finalGameStatus = gameStatus()
-    console.log('game final status is: ', finalGameStatus)
+    // console.log('game final status is: ', finalGameStatus)
   }
   if (currentGameStatus === 'X' || finalGameStatus === 'X') {
     game.gameOver = 1
@@ -664,7 +655,7 @@ const gameStatus = function () {
 }
 
 const winnerWinner = function (data) {
-  console.log('made it to winnerWinner with this data: ', data)
+  // console.log('made it to winnerWinner with this data: ', data)
   let winner = ' '
 
   const xPos = []
@@ -678,115 +669,97 @@ const winnerWinner = function (data) {
       }
     }
   }
-  console.log('here is the xPos[]: ', xPos)
-  console.log('here is the oPos[]: ', oPos)
+  // console.log('here is the xPos[]: ', xPos)
+  // console.log('here is the oPos[]: ', oPos)
 
   if (xPos.indexOf(1) > -1 && xPos.indexOf(2) > -1 && xPos.indexOf(3) > -1) {
     winner = 'X'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (xPos.indexOf(1) > -1 && xPos.indexOf(4) > -1 && xPos.indexOf(7) > -1) {
     winner = 'X'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (xPos.indexOf(1) > -1 && xPos.indexOf(5) > -1 && xPos.indexOf(9) > -1) {
     winner = 'X'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (xPos.indexOf(2) > -1 && xPos.indexOf(5) > -1 && xPos.indexOf(8) > -1) {
     winner = 'X'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (xPos.indexOf(3) > -1 && xPos.indexOf(5) > -1 && xPos.indexOf(7) > -1) {
     winner = 'X'
-
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (xPos.indexOf(3) > -1 && xPos.indexOf(6) > -1 && xPos.indexOf(9) > -1) {
     winner = 'X'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (xPos.indexOf(4) > -1 && xPos.indexOf(5) > -1 && xPos.indexOf(6) > -1) {
     winner = 'X'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (xPos.indexOf(7) > -1 && xPos.indexOf(8) > -1 && xPos.indexOf(9) > -1) {
     winner = 'X'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (oPos.indexOf(1) > -1 && oPos.indexOf(2) > -1 && oPos.indexOf(3) > -1) {
     winner = 'O'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (oPos.indexOf(1) > -1 && oPos.indexOf(4) > -1 && oPos.indexOf(7) > -1) {
     winner = 'O'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (oPos.indexOf(1) > -1 && oPos.indexOf(5) > -1 && oPos.indexOf(9) > -1) {
     winner = 'O'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (oPos.indexOf(2) > -1 && oPos.indexOf(5) > -1 && oPos.indexOf(8) > -1) {
     winner = 'O'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (oPos.indexOf(3) > -1 && oPos.indexOf(5) > -1 && oPos.indexOf(7) > -1) {
     winner = 'O'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (oPos.indexOf(3) > -1 && oPos.indexOf(6) > -1 && oPos.indexOf(9) > -1) {
     winner = 'O'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (oPos.indexOf(4) > -1 && oPos.indexOf(5) > -1 && oPos.indexOf(6) > -1) {
     winner = 'O'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   if (oPos.indexOf(7) > -1 && oPos.indexOf(8) > -1 && oPos.indexOf(9) > -1) {
     winner = 'O'
-    console.log('we have a winner: ', winner)
     return winner
   }
 
   winner = 'C'
-  console.log('we have a winner: ', winner)
   return winner
 }
 
 const buildCurrentMove = function (boxNumber, player, gameStatus) {
-  console.log('boxNumber is: ', boxNumber)
-  console.log('player is: ', player)
-  console.log('gameStatus is: ', gameStatus)
+  // console.log('boxNumber is: ', boxNumber)
+  // console.log('player is: ', player)
+  // console.log('gameStatus is: ', gameStatus)
 
   currentMove.game.cell.index = +boxNumber
 
@@ -801,19 +774,14 @@ const buildCurrentMove = function (boxNumber, player, gameStatus) {
   } else {
     currentMove.game.over = false
   }
-  console.log('here is the currentMove object: ', currentMove)
-  // gameEvents.updateGameMoves()
+  // console.log('here is the currentMove object: ', currentMove)
   updtGame()
   return
 }
 
 const updtGame = function () {
   // event.preventDefault()
-
   // const data = getFormFields(event.target)
-
-  console.log('made it to update game, data is: ', currentMove)
-
   api.updateMove(currentMove)
   .done(ui.updateMoveSuccess)
   .fail(ui.updateMoveFailure)
