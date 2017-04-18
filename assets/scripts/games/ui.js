@@ -26,7 +26,7 @@ const createGameSuccess = (data) => {
 const createGameFailure = (error) => {
   // console.error('createGameFailiure log', error)
   const title = 'Danger Will Robinson'
-  const body = 'Error with creating a new game ' + error
+  const body = 'Error with creating a new game -- ' + error.statusText
   $('#alert-modal-title').html(title)
   $('#alert-modal-body').html(body)
   $('#alert-modal').modal('show')
@@ -39,7 +39,7 @@ const updateMoveSuccess = (data) => {
 const updateMoveFailure = (error) => {
   // console.error('createGameFailiure log', error)
   const title = 'Danger Will Robinson'
-  const body = 'Error with move update for the game' + error
+  const body = 'Error with move update for the game -- ' + error.statusText
   $('#alert-modal-title').html(title)
   $('#alert-modal-body').html(body)
   $('#alert-modal').modal('show')
@@ -60,7 +60,7 @@ const myStatsSuccess = (data) => {
 const myStatsFailure = (error) => {
   // console.error('myStatsFailiure log', error)
   const title = 'Danger Will Robinson'
-  const body = 'Error with my Stats.  Sorry bud. ' + error
+  const body = 'Error with my Stats.  Sorry bud -- ' + error.statusText
   $('#alert-modal-title').html(title)
   $('#alert-modal-body').html(body)
   $('#alert-modal').modal('show')

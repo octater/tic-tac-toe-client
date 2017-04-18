@@ -11,7 +11,7 @@ const signUpSuccess = (data) => {
 const signUpFailure = (error) => {
   // console.error('failiure log', error)
   const title = 'Danger Will Robinson'
-  const body = 'Error with sign-up' + error
+  const body = 'Error with sign-up -- ' + error.statusText
   $('#alert-modal-title').html(title)
   $('#alert-modal-body').html(body)
   $('#alert-modal').modal('show')
@@ -35,7 +35,7 @@ const signInSuccess = (data) => {
 const signInFailure = (error) => {
   // console.error('signInFailiure log', error)
   const title = 'Danger Will Robinson'
-  const body = 'Error with sign-in' + error
+  const body = 'Error with sign-in -- ' + error.statusText
   $('#alert-modal-title').html(title)
   $('#alert-modal-body').html(body)
   $('#alert-modal').modal('show')
@@ -52,12 +52,22 @@ const signOutSuccess = () => {
   }
 
   $('#signOut').modal('hide')
+  $('#box1').css('background-color', '#fff')
+  $('#box2').css('background-color', '#fff')
+  $('#box3').css('background-color', '#fff')
+  $('#box4').css('background-color', '#fff')
+  $('#box5').css('background-color', '#fff')
+  $('#box6').css('background-color', '#fff')
+  $('#box7').css('background-color', '#fff')
+  $('#box8').css('background-color', '#fff')
+  $('#box9').css('background-color', '#fff')
+  $('#player-now-up').text(' ')
 }
 
 const signOutFailure = (error) => {
   // console.error('signOutFailiure log', error)
   const title = 'Danger Will Robinson'
-  const body = 'Error with sign-out' + error
+  const body = 'Error with sign-out -- ' + error.statusText
   $('#alert-modal-title').html(title)
   $('#alert-modal-body').html(body)
   $('#alert-modal').modal('show')
@@ -71,7 +81,7 @@ const changePasswordSuccess = () => {
 const changePasswordFailure = (error) => {
   // console.error('change password Failiure log', error)
   const title = 'Danger Will Robinson'
-  const body = 'Error with changing password' + error
+  const body = 'Error with changing password -- ' + error.statusText
   $('#alert-modal-title').html(title)
   $('#alert-modal-body').html(body)
   $('#alert-modal').modal('show')
